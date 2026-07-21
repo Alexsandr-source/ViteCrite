@@ -1,0 +1,267 @@
+.AboutUs-wrapper {
+    position: relative;
+    display: flex;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0%;
+        left: -2%;
+        width: 64%;
+        height: 74%;
+
+        background: rgba(255, 255, 255, 0.06);
+        z-index: -2;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        height: 70%;
+
+        background: linear-gradient(0deg, #1CC4F9, #FE69FE);
+        border-radius: 14000px 0px 15000px 0px; /* МАГИЯ */
+
+        filter: blur(130px); /* свечение */
+        z-index: -1; /* между прямоугольником и картинкой */
+    }
+    
+}
+
+.AboutUs {
+    &-container {
+        width: 90%;
+        display: grid;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 120px;
+        grid-template-columns: 1fr 1fr;
+    }
+    &-col {
+        position: relative;
+        display: inline-block;
+    }
+
+    &-img {
+        position: relative;
+        z-index: 2;
+        display: block;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            width: 100%;
+            height: 100%;
+            background: #6C63FF;
+            border-radius: 12px;
+            z-index: 1;
+        }  
+    }
+
+    &-title {
+        font-family: Chakra Petch;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 14%;
+        text-transform: uppercase;
+
+        display: inline-block;
+        background: linear-gradient(90deg, var(--blue-color), var(--purple10-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        &-sub {
+            margin-top: 12px;
+            font-family: Chakra Petch;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 48px;
+            line-height: 58px;
+            letter-spacing: -0.5%;
+
+            color: var(--white-color);
+        }
+    }
+    &-text {
+        margin-top: 12px;
+
+        font-family: Chakra Petch;
+        font-weight: 300;
+        font-style: Light;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 28px;
+        letter-spacing: 0%;
+
+        color: var(--grey2-color);
+    }
+    &__checkBox {
+        margin-top: 24px;
+        display: grid;
+        gap: 14px;
+        &-img {
+            margin-right: 12px;
+        }
+        &-text {
+            display: flex;
+            gap: 1%;
+
+            font-family: Chakra Petch;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 16px;
+            leading-trim: NONE;
+            line-height: 28px;
+            letter-spacing: 0%;
+            vertical-align: bottom;
+
+            color: var(--white-color);
+        }
+    }
+    &-button {
+        padding: 18px 38px;
+        margin-top: 32px;
+
+        font-family: Chakra Petch;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        
+        color: var(--white-color);
+        background: linear-gradient(270deg, var(--purple10-color), var(--blue-color));
+        border: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            opacity: .6;
+        }
+    }
+}
+
+.com {
+    position: relative;
+    padding-left: 42.5%;
+    z-index: 999;
+    & img {
+        border: 3px solid #FFFFFF;
+        border-radius: 50%;
+        padding: 6px 6px;
+        width: 12px;
+        height: 12px;
+    }
+}
+.progress-fill {
+  height: 30px;
+  width: 0;
+  background: linear-gradient(to right, #19B5F1, #CA6AEB);
+  transition: width 0.1s linear;
+}
+.thumbnail {
+    width:200px;
+    margin:0;
+    border-radius: 6px;
+}
+.close {
+    background-color: white;
+    border-radius: 10px;
+}
+.AboutUsVideo {
+    position: absolute;
+    bottom: -60px;
+    right: -15px;
+    z-index: 4;
+    &-container {
+        position: relative;
+    }
+    &-close {
+        display: none;
+    }
+    &-open {
+        display: block;
+    }
+    &__player {
+        display: none;
+        margin:0;
+        border-radius: 6px;
+        &-open {
+            width: 100%;
+        }
+    }
+    &__hud {
+        position: relative;
+        bottom: 150px;
+        width: 100%;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        margin:0;
+        padding:1px;
+        background-color: #1E212C;
+
+        &__element {
+            cursor:pointer;
+            display:inline-block;
+            vertical-align:middle;
+            height:30px;
+        }
+        &__action {
+            width:30px;
+            &_play {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.2vmax;
+                height: 2.2vmax;
+                background-color: var(--accent-color);
+                border-radius: 100%;
+                cursor: pointer;
+                & img {
+                    width: 1vmax;
+                    height: 1vmax;
+                }
+            }
+            &_pause {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.2vmax;
+                height: 2.2vmax;
+                background-color: var(--accent-color);
+                border-radius: 100%;
+            }
+            &_img {
+                width: 1.5vmax;
+                height: 1.5vmax;
+            }
+        }
+        &__curr_time {
+            color: #1E212C;
+        }
+        &__duration {
+            color: #1E212C;
+        }
+        &__progress {
+            width: 90%;
+            border-radius: 5px;
+            background-color: #1E212C;
+            overflow: hidden;
+            &_line {
+                width: 100%;
+                
+                background-color: var(--accent-color);
+            }
+        }
+    }
+}

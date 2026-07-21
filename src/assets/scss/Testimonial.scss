@@ -1,0 +1,237 @@
+.Testimonial {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  &-container {
+    position: relative;
+    margin-top: 100px;
+    width:700px;
+    height:700px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80%;
+      height: 80%;
+      
+      background: linear-gradient(0deg, #1CC4F9, #FE69FE);
+      border-radius: 16000px 0px 15000px 0px;
+      
+      filter: blur(130px);
+      z-index: -1;
+    }
+  }
+  &__header {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-title {
+    display: inline-flex;
+    font-family: Chakra Petch;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 14%;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, var(--blue-color), var(--purple10-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &-text {
+    margin-top: 20px;
+    font-family: Chakra Petch;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.5%;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+.center{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  &-img {
+    position: absolute;
+    --size: 9.8px;
+    bottom: calc(7 * var(--size));
+    width: calc(52 * var(--size));
+    height: calc(32 * var(--size));
+    z-index: 2;
+  }
+  &-circle{
+    display: flex;
+    justify-content: center;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background-color: rgba(255, 255, 255, 0.17);
+    overflow: hidden;
+    &-img {
+      position: relative;
+      --size: 9.8px;
+      bottom: calc(3.3 * var(--size));
+      width: calc(60 * var(--size));
+      height: calc(40 * var(--size));
+      transform: scaleX(-1);
+      z-index: 1;
+    }
+  }
+}
+
+.circles{
+  &__dropdown {
+    display: none;
+    left: 80px;
+    position: absolute;
+    padding: 19px 18px;
+    width: 246px;
+    height: 86px;
+    background: url("../img/svg.svg") no-repeat;
+    background-size: 100% 100%;
+    &-info {
+      font-family: Chakra Petch;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 12px;
+      leading-trim: NONE;
+      line-height: 20px;
+      letter-spacing: 0%;
+
+      color: #FFFFFF;
+    }
+    &-name {
+      margin-top: 8px;
+      font-family: Chakra Petch;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 12px;
+      leading-trim: NONE;
+      line-height: 24px;
+      letter-spacing: 0%;
+      color: #FFFFFF;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 48%;
+        height: 2px;
+        left: 10;
+        bottom: 14px;
+        background: linear-gradient(90deg, var(--blue-color), var(--purple10-color));
+      }
+    }
+  }
+  &:hover {
+    background:
+    linear-gradient(#18181B, #18181B) padding-box,
+    linear-gradient(to right, var(--blue-color), var(--purple10-color)) border-box;
+  }
+  &:hover &__dropdown {
+    display: block;
+  }
+}
+
+.orbit{
+  position: absolute;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  border: 1px rgba(255, 255, 255, 0.17) solid;
+  border-radius:50%;
+}
+.orbit2{width:500px; height:500px; z-index: 6;}
+.orbit3{width:600px; height:600px; z-index: 5;}
+.orbit4{width:700px; height:700px; z-index: 4;}
+.orbit5{width:800px; height:800px; z-index: 3;}
+.orbit6{width:900px; height:900px; z-index: 1;}
+
+.orbit2-circles,
+.orbit3-circles,
+.orbit4-circles,
+.orbit5-circles,
+.orbit6-circles,
+.orbit7-circles{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  width: 55px;
+  height: 55px;
+  top:50%;
+  left:50%;
+  z-index: 1;
+
+  border-radius: 50%;
+  background:
+    linear-gradient(#18181B, #18181B) padding-box,
+    linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0)) border-box;
+  border: 2px solid transparent;
+  &:hover {
+    background:
+      linear-gradient(#18181B, #18181B) padding-box,
+      linear-gradient(to right, var(--blue-color), var(--purple10-color)) border-box;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      background: linear-gradient(0deg, #1CC4F9, #FE69FE);
+      border-radius: 160px 0px 150px 0px;
+      
+      filter: blur(13px);
+      z-index: -1;
+    }
+  }
+  & img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+  }
+}
+
+.orbit2-circles{
+  --radius: 250px;
+  --deg: 90deg;
+  transform: translate(-50%, -50%) rotate(var(--deg)) translateX(var(--radius)) rotate(calc(-1 * var(--deg)));
+}
+.orbit3-circles{
+  --radius: 300px;
+  --deg: 320deg;
+  transform: translate(-50%, -50%) rotate(var(--deg)) translateX(var(--radius)) rotate(calc(-1 * var(--deg)));
+}
+.orbit4-circles{
+  --radius: 350px;
+  --deg: 0deg;
+  transform: translate(-50%, -50%) rotate(var(--deg)) translateX(var(--radius)) rotate(calc(-1 * var(--deg)));
+}
+.orbit5-circles{
+  --radius: 400px;
+  --deg: 140deg;
+  transform: translate(-50%, -50%) rotate(var(--deg)) translateX(var(--radius)) rotate(calc(-1 * var(--deg)));
+}
+.orbit6-circles{
+  --radius: 450px;
+  --deg: 60deg;
+  transform: translate(-50%, -50%) rotate(var(--deg)) translateX(var(--radius)) rotate(calc(-1 * var(--deg)));
+}
+.orbit7-circles{
+  --radius: 465px;
+  --deg: 200deg;
+  transform: translate(-50%, -50%) rotate(var(--deg)) translateX(var(--radius)) rotate(calc(-1 * var(--deg)));
+}

@@ -1,0 +1,63 @@
+.OurTruPart {
+    position: relative;
+    margin-top: 200px;
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-title {
+            margin-bottom: 16px;
+            font-family: Chakra Petch;
+            font-weight: 600;
+            font-style: SemiBold;
+            font-size: 48px;
+            line-height: 58px;
+            letter-spacing: -0.5%;
+            color: #FFFFFF;
+            &-sub {
+                margin-bottom: 12px;
+                font-family: Chakra Petch;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 14%;
+                text-transform: uppercase;
+
+                display: inline-flex;
+                background: linear-gradient(90deg, var(--blue-color), var(--purple10-color));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        &-text {
+            width: 50%;
+            font-family: Chakra Petch;
+            font-weight: 300;
+            font-style: Light;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0%;
+
+            color: #D1D1D1;
+        }
+    }
+    &__body {
+        margin-top: 450px;
+        position: relative;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      height: 80%;
+      
+      background: linear-gradient(0deg, #1CC4F9, #FE69FE);
+      border-radius: 16000px 0px 15000px 0px;
+      
+      filter: blur(130px);
+      z-index: -1;
+    }
+}

@@ -1,0 +1,259 @@
+.HowStarted-wrapper {
+    position: relative;
+    display: flex;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        height: 70%;
+
+        background: linear-gradient(0deg, #1CC4F9, #FE69FE);
+        border-radius: 14000px 0px 15000px 0px;
+
+        filter: blur(130px);
+        z-index: -1;
+    }
+}
+
+.HowStarted {
+    &-container{
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        margin-top: 150px;
+    }
+    &-content {
+        margin-top: 48px;
+    }
+    &-video {
+        width: 80vw;
+        height: 35vw;
+
+        &-container {
+            position: relative;
+        }
+        &-close {
+            display: none;
+        }
+        &-open {
+            display: block;
+        }
+        &__player {
+            display: none;
+            margin:0;
+            border-radius: 6px;
+            &-open {
+                width: 100%;
+            }
+        }
+        &-com {
+            position: relative;
+            padding-left: 47%;
+            z-index: 999;
+
+            &-button {
+                backdrop-filter: blur(10px);
+                border-radius: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &-progress-fill {
+            height: 10px;
+            width: 0;
+            background: #fff;
+            border-radius: 50px;
+            transition: width 0.1s linear;
+        }
+        &-thumbnail {
+            width: 80vw;
+            height: 35vw;
+            margin:0;
+            border-radius: 6px;
+        }
+    }
+    &-title {
+        font-family: Chakra Petch;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 14%;
+        text-transform: uppercase;
+
+        display: inline-block;
+        background: linear-gradient(90deg, var(--blue-color), var(--purple10-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &-sub {
+            margin-top: 12px;
+            width: 50%;
+            font-family: Chakra Petch;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 58px;
+            letter-spacing: -0.5%;
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+        }
+    }
+    &-button {
+        margin-top: 48px;
+        padding: 18px 38px;
+
+        font-family: Chakra Petch;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 1.5px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        
+        color: var(--white-color);
+        background: linear-gradient(270deg, var(--purple10-color), var(--blue-color));
+        border: 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            opacity: .6;
+        }
+    }
+}
+
+.HowStartedVideo {
+    position: relative;
+    
+    &__player {
+        display: none;
+        width: 100%;
+        height: 100%;
+        margin:0;
+        border-radius: 6px;
+        &-open {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+    }
+    &__info {
+        position: absolute;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        top: 30px;
+        left: 30px;
+        color: white;
+        z-index: 2;
+
+        &-title {
+            border-radius: 16px;
+            padding: 2px 10px;
+
+            font-family: Chakra Petch;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0%;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.336);
+        }
+        &-text {
+            font-family: Chakra Petch;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: -2%;
+        }
+    }
+    &__hud {
+        position: absolute;
+        display: none;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-radius: 6px;
+
+        // display: flex;
+        // bottom: 10px;
+        // width: 96%;
+        // align-items: center;
+        // justify-content: center;
+
+        &-bar {
+            position: absolute;
+            display: inline-block;
+            align-items: center;
+            margin: 0 1%;
+            width: 100%;
+            bottom: 10px;
+        }
+
+        &__element {
+            cursor:pointer;
+            display:inline-block;
+            vertical-align:middle;
+            height:30px;
+        }
+        &__action {
+            width:30px;
+            margin-right: 10px;
+            &_play {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.2vmax;
+                height: 2.2vmax;
+                background-color: var(--accent-color);
+                border-radius: 100%;
+                cursor: pointer;
+                & img {
+                    width: 1vmax;
+                    height: 1vmax;
+                }
+            }
+            &_pause {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.2vmax;
+                height: 2.2vmax;
+                background-color: var(--accent-color);
+                border-radius: 100%;
+            }
+            &_img {
+                width: 1.5vmax;
+                height: 1.5vmax;
+            }
+        }
+        &__curr_time {
+            color: #1E212C;
+        }
+        &__duration {
+            color: #1E212C;
+        }
+        &__progress {
+            width: 94%;
+            height: 10px;
+            border-radius: 50px;
+            background-color: #B3B3B3;
+            overflow: hidden;
+            &_line {
+                width: 100%;
+                background-color: var(--accent-color);
+            }
+        }
+    }
+}

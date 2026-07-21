@@ -1,0 +1,32 @@
+.ECP {
+    &-container {
+        width: 100%;
+        display: flex;
+
+        border: 1px solid #FFFF;
+        background-color: #252532;
+    }
+    &__col {
+        padding: 25px;
+        &-title {
+            margin-top: 32px;
+            font-family: Chakra Petch;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            vertical-align: bottom;
+            color: rgba(255, 255, 255, 1);
+        }
+        &-text {
+            font-family: Chakra Petch;
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: 0%;
+            color: rgba(176, 176, 178, 1);
+        }
+    }
+}

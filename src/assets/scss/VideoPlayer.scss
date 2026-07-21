@@ -1,0 +1,124 @@
+.com {
+    position: relative;
+    padding-left: 47.5%;
+    z-index: 999;
+    & img {
+        width: 12px;
+        height: 12px;
+    }
+}
+.progress-fill {
+  height: 30px;
+  width: 0;
+  background: linear-gradient(to right, #19B5F1, #CA6AEB);
+  transition: width 0.1s linear;
+}
+.thumbnail {
+    width:200px;
+    margin:0;
+    border-radius: 6px;
+}
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background-color: rgba(0,0,0,.8);
+}
+.video_fixed {
+  position: fixed;
+  top: 25vh;
+  left: 25vw;
+  width: 50vw;
+  height: 50vh;
+  z-index: 6;
+}
+.close {
+    background-color: white;
+    border-radius: 10px;
+}
+.video {
+    position: relative;
+    z-index: 4;
+    &-close {
+        display: none;
+    }
+    &-open {
+        display: block;
+    }
+    &__player {
+        display: none;
+        margin:0;
+        border-radius: 6px;
+        &-open {
+            width: 100%;
+        }
+    }
+    &__hud {
+        position: relative;
+        bottom: 150px;
+        width: 100%;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        margin:0;
+        padding:1px;
+        background-color: #1E212C;
+
+        &__element {
+            cursor:pointer;
+            display:inline-block;
+            vertical-align:middle;
+            height:30px;
+        }
+        &__action {
+            width:30px;
+            &_play {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.2vmax;
+                height: 2.2vmax;
+                background-color: var(--accent-color);
+                border-radius: 100%;
+                cursor: pointer;
+                & img {
+                    width: 1vmax;
+                    height: 1vmax;
+                }
+            }
+            &_pause {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.2vmax;
+                height: 2.2vmax;
+                background-color: var(--accent-color);
+                border-radius: 100%;
+            }
+            &_img {
+                width: 1.5vmax;
+                height: 1.5vmax;
+            }
+        }
+        &__curr_time {
+            color: #1E212C;
+        }
+        &__duration {
+            color: #1E212C;
+        }
+        &__progress {
+            width: 90%;
+            border-radius: 5px;
+            background-color: #1E212C;
+            overflow: hidden;
+            &_line {
+                width: 100%;
+                
+                background-color: var(--accent-color);
+            }
+        }
+    }
+}

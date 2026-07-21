@@ -1,0 +1,28 @@
+.contact-hero {
+    margin: 0 13%;
+    padding: 100px 0 40px;
+    text-align: center;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #3ab8ff, #ca6aeb) 1;
+    &__title {
+        font-size: 48px;
+        color: var(--white-color);
+        text-shadow: 0 0 5px var(--grey1-color);
+    }
+    
+    &__breadcrumbs {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #ccc;
+        
+        a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        span {
+            margin: 0 5px;
+        }
+    }
+}
