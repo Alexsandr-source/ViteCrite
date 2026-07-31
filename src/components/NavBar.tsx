@@ -52,6 +52,14 @@ function NavBar() {
                 Blog
               </NavLink>
             </li>
+
+            <li>
+              <NavLink to='/products' className={({ isActive }) =>
+                isActive ? 'header__link header__link-active' : 'header__link'
+              }>
+                Products
+              </NavLink>
+            </li>
           </ul>
         </nav>
 

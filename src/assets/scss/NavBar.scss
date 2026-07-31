@@ -7,46 +7,44 @@
 }
 
 .header {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 25px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  &__nav {
     display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    &__nav {
-      display: grid;
-      width: 30vw;
-      list-style: none;
-      justify-items: center;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    &__link {
+    width: 30vw;
+    list-style: none;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  &__link {
+    font-family: Chakra Petch;
+    font-weight: 300;
+    font-style: Light;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    color: var(--white-color);
+    text-decoration: none;
+    transition: .2s;
+    &-active {
       font-family: Chakra Petch;
-      font-weight: 300;
-      font-style: Light;
-      font-size: 16px;
+      font-weight: 500;
+      font-size: 17px;
       line-height: 28px;
       letter-spacing: 0%;
-
       color: var(--white-color);
       text-decoration: none;
       transition: .2s;
-      &-active {
-        font-family: Chakra Petch;
-        font-weight: 500;
-        font-size: 17px;
-        line-height: 28px;
-        letter-spacing: 0%;
-
-        color: var(--white-color);
-        text-decoration: none;
-        transition: .2s;
-      }
-      &:hover {
-        font-size: 17px;
-        font-weight: 500;
-        cursor: pointer;
-      }
+    }
+    &:hover {
+      font-size: 17px;
+      font-weight: 500;
+      cursor: pointer;
+    }
   }
   
   &__button {

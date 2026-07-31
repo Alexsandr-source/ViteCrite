@@ -9,9 +9,10 @@ import PricingPlan from './pages/PricingPlan';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TemsAndConfitions from './pages/TemsAndConditions';
 import FAQ from './pages/Faq';
+import Products from './pages/Products';
 
 function App() {
-  return (
+  return ( 
     <>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -22,6 +23,7 @@ function App() {
         <Route path='/our-team' element={<OurTeam/>}/>
         <Route path='/pricing-plan' element={<PricingPlan/>}/>
         <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
+        <Route path='/products' element={<Products/>}/>
         <Route path='/tems-and-conditions' element={<TemsAndConfitions/>}/>
         <Route path='/faq' element={<FAQ/>}/>
       </Routes>
