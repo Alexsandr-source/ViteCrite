@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import ReactDOM from 'react-dom/client'
 import Home from './pages/Home';
 import About from './pages/About';
 import Service from './pages/Service';
@@ -11,7 +12,7 @@ import TemsAndConfitions from './pages/TemsAndConditions';
 import FAQ from './pages/Faq';
 import Products from './pages/Products';
 
-function App() {
+export default function App() {
   return ( 
     <>
       <Routes>
@@ -31,4 +32,6 @@ function App() {
   );
 }
 
-export default App;
+const rootElement = document.getElementById('root')
+if (!rootElement) throw new Error('Missing #root element')
+ReactDOM.createRoot(rootElement).render(<App />)
