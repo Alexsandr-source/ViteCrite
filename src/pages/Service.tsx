@@ -17,9 +17,6 @@ function Service() {
             </div>
           </section>
         </main>
-        <footer>
-
-        </footer>
     </>
   );
 }

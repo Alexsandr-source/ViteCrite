@@ -17,9 +17,6 @@ function PricingPlan() {
             </div>
           </section>
         </main>
-        <footer>
-
-        </footer>
     </>
   );
 }

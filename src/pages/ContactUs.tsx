@@ -17,9 +17,6 @@ function ContactUs() {
             </div>
           </section>
         </main>
-        <footer>
-
-        </footer>
     </>
   );
 }

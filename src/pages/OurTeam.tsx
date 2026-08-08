@@ -17,9 +17,6 @@ function OurTeam() {
             </div>
           </section>
         </main>
-        <footer>
-
-        </footer>
     </>
   );
 }

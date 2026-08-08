@@ -17,9 +17,6 @@ function Blog() {
             </div>
           </section>
         </main>
-        <footer>
-
-        </footer>
     </>
   );
 }

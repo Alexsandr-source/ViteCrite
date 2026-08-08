@@ -17,9 +17,6 @@ function FAQ() {
             </div>
           </section>
         </main>
-        <footer>
-
-        </footer>
     </>
   );
 }
