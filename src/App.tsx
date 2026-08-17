@@ -7,9 +7,10 @@ import ContactUs from "./pages/ContactUs";
 import OurTeam from "./pages/OurTeam";
 import PricingPlan from "./pages/PricingPlan";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Products from "./pages/Products";
+import ProductDetails from "./pages/Product";
 import TemsAndConfitions from "./pages/TemsAndConditions";
 import FAQ from "./pages/Faq";
-import Products from "./pages/Products";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/pricing-plan" element={<PricingPlan />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/tems-and-conditions" element={<TemsAndConfitions />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>

@@ -1,5 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "react-router-dom";
+import "../index.scss";
 
 interface Product {
   id: number;
@@ -34,11 +36,13 @@ export default function Products() {
   return (
     <>
       {data.products.slice(0, 10).map((product) => (
-        <div className="bg-white" key={product.id}>
-          <img src={product.thumbnail} alt={product.title} />
-          <h2>{product.title}</h2>
-          <p>{product.price}$</p>
-        </div>
+        <Link to={`/products/${product.id}`}>
+          <div className="bg-white w-40vw" key={product.id}>
+            <img src={product.thumbnail} alt={product.title} />
+            <h2>{product.title}</h2>
+            <p>{product.price}$</p>
+          </div>
+        </Link>
       ))}
     </>
   );
